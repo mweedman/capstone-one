@@ -1,0 +1,80 @@
+*{
+  box-sizing: border-box;
+}
+
+html{
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  text-align: center;
+  background-color: grey;
+  color: white;
+}
+
+body{
+  width: 100%;
+}
+
+.container {
+  border: 3px solid white;
+  border-radius: 5px;
+  width: 99%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.top {
+  position: absolute;
+  top: 0px;
+  align-self: center;
+}
+
+.mid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.bot {
+  position: absolute;
+  bottom: 0px;
+  align-self: center;
+}
+
+.non-player {
+  border: 3px solid white;
+  border-radius: 5px;
+  height: 25vh;
+  width: 15vw;
+}
+
+.north-hand {
+  border: 3px solid white;
+  border-radius: 5px;
+  height: 15vh;
+  width: 25vw;
+}
+
+.player-hand {
+  border: 3px solid white;
+  border-radius: 5px;
+  height: 25vh;
+  width: 50vw;
+}
+
+.play-field {
+  border: 3px solid white;
+  border-radius: 5px;
+  width: 50vw;
+  height: 30vh;
+}

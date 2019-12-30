@@ -5,7 +5,7 @@ export default function Card(props) {
 return(
   <div className="card">
     <span>{props.suit}</span>
-    <span>{cardMethods.cardNames[props.value]}</span>
+    <span>{props.value}</span>
   </div>
 )
 }

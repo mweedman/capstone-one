@@ -1,10 +1,16 @@
 import config from '../config';
 
-export default {
-  receiveHand: function(){
-    fetch(`${config.API_ADDRESS}/game`)
-    .then(hand => hand.json())
-    .then(handJson => console.log(handJson));
-  }
+let returnedCards;
+
+const receiveHand = function(){
+   return fetch(`${config.API_ADDRESS}/game`)
+    .then(res => res.json())
+    .then(cards => returnedCards = cards.cards);
 };
+
+
+export default {
+  receiveHand,
+  returnedCards
+  };
 

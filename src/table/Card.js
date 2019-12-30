@@ -1,5 +1,4 @@
 import React from 'react';
-import cardMethods from '../services/Card-Methods'
 import './Card.css';
 
 export default function Card(props) {

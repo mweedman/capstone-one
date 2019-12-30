@@ -1,8 +1,16 @@
 .card {
-  display: inline-block;
   border: 1px solid black;
   border-radius: 5px;
-  height: 200px;
-  width: 100px;
+  height: 100%;
+  width: 5%;
   background-color: white;
+  color: black;
+}
+
+.card-wrapper{
+  overflow: hidden;
+}
+
+.card-wrapper:last-child, .card-wrapper:hover{
+  overflow: visible;
 }

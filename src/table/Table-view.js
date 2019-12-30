@@ -33,17 +33,30 @@ class Table extends React.Component {
     if(this.state.dealt === false){
       layout = <div>Placeholder</div>
     } else{
-      layout = this.state.hand.map((card, index) => {
-      return <Card key={index}
-      suit={card[0]} value={card[1]} />
-    })}
+      layout = <div className ="cards">
+        {this.state.hand.map((card, index) => {
+         return <Card key={index}
+          suit={card[0]} value={card[1]} />
+        })}
+      </div>}
     return(
-      <div>
-        <button onClick={this.clickHandler}>Deal</button>
-        <div>
-          {layout}
+      <div className="table container">   
+        <div className="non-player north-hand top">
+          <div>
+            <button onClick={this.clickHandler}>Deal</button>
+          </div>
+        North
         </div>
-      </div>
+
+        <div className="mid">
+          <div className="non-player west-hand">West</div>
+          <div className="play-field">Play</div>
+          <div className="non-player east-hand ">East</div>
+        </div>
+        
+        <div className="player-hand south-hand bot">{layout}</div>
+    </div>
+    
     )
   };
 }

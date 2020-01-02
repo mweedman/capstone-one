@@ -1,12 +1,28 @@
 import React from 'react';
-// import LoginApiService from '../../services/login-api-service';
 import LoginForm from './LoginForm';
 
 export default class Login extends React.Component {
+  static defaultProps = {
+    location: {},
+    history: {
+      push: () => {}
+    }
+  }
+
+  handleLoginSuccess = () => {
+    const { location, history } = this.props;
+    const destination = (location.state || {}).from || '/';
+    history.push(destination);
+    }
 
   render(){
     return(
-      <LoginForm />
+      <div>
+        <h3>Login</h3>
+        <LoginForm 
+        onLoginSuccess={this.handleLoginSuccess}
+        />
+      </div>
     );
   }
 }

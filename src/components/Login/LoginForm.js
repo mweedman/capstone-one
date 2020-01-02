@@ -31,9 +31,9 @@ export default class LoginForm extends React.Component {
 
   render(){
     return(
-      <form class="login-form" onSubmit={this.handleSubmitJwtAuth}>
+      <form className="login-form" onSubmit={this.handleSubmitJwtAuth}>
         <input required name="user_name" id="username" placeholder="username" />
-        <input required name="password" id="password" placeholder="password" />
+        <input required name="password" id="password" type="password" placeholder="password" />
         <button type="submit">Login</button>
         <Link to='/create-account'>
           <button>Create account!</button>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card';
-import gameServices from '../services/game-services';
+import gameServices from '../../services/game-services';
 
 class Table extends React.Component {
   constructor(props){

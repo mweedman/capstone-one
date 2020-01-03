@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import TokenService from '../../services/token-services'
 
-function PublicOnlyRoute({ component, ...props}) {
+export default function PublicOnlyRoute({ component, ...props}) {
   const Component = component;
   return(
     <Route  
@@ -15,5 +15,3 @@ function PublicOnlyRoute({ component, ...props}) {
     />
   )
 }
-
-export default PublicOnlyRoute;

@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './Card';
 import gameServices from '../../services/game-services';
+import './Table-view.css';
 
 class Table extends React.Component {
   constructor(props){
@@ -13,18 +14,25 @@ class Table extends React.Component {
 
   clickHandler = (e) => {
     e.preventDefault();
-    let dealtHand;
     gameServices.receiveHand()
-      .then(returnedHand => dealtHand = returnedHand)
-      .then(dealtHand => this.setHand(dealtHand));
+      .then(returnedHand => this.setHand(returnedHand));
   };
 
   setHand = (hand) => {
+    console.log(hand);
     this.setState({
       hand: hand,
       dealt: true
-    },console.log(hand))
+    }, console.log(hand))
   };
+
+  playCard = (e, obj) => {
+    e.preventDefault();
+    console.log(obj);
+    gameServices.sendCard(obj, this.state.hand)
+    .then(obj => console.log(obj));
+
+  }
 
   //TIMERS DONE ON FRONT END//
 
@@ -36,7 +44,7 @@ class Table extends React.Component {
       layout = <div className ="cards">
         {this.state.hand.map((card, index) => {
          return <Card key={index}
-          suit={card[0]} value={card[1]} />
+          suit={card[0]} value={card[1]} playCard={this.playCard}/>
         })}
       </div>}
     return(

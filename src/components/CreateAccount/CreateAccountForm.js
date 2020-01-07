@@ -9,19 +9,19 @@ class CreateAccount extends React.Component{
 
   handleSubmit = ev => {
     ev.preventDefault();
-    const { user_name, password, email_address } = ev.target;
+    const { user_name, user_password, email_address } = ev.target;
 
     this.setState({ error: null })
     LoginApiService.postUser({
       user_name: user_name.value,
-      password: password.value,
+      user_password: user_password.value,
       email_address: email_address.value
     })
       .then(user => {
         user_name.value = '';
-        password.value = '';
+        user_password.value = '';
         email_address.value = '';
-        this.props.onRegistRationSuccess();
+        this.props.onRegistrationSuccess();
       })
       .catch(res => {
         this.setState({ error: res.error });
@@ -37,12 +37,12 @@ class CreateAccount extends React.Component{
           {error && <p className="red">{error}</p>}
         </div>
         <div className="create">
-          <form className="create-form">
+          <form className="create-form" onSubmit={this.handleSubmit}>
             <input 
             name="user_name" id="username" placeholder="username" 
             />
             <input 
-            name="password"
+            name="user_password"
             id="password" placeholder="password" 
             />
             <input 

@@ -8,7 +8,7 @@ class CreateAccountView extends React.Component{
     }
   };
 
-  handRegistrationSuccess = user => {
+  onRegistrationSuccess = user => {
     const { history } = this.props;
     history.push('/login');
   }

@@ -9,8 +9,10 @@ import Login from '../../routes/Login/Login-View';
 import NotFoundPage from '../../routes/NotFound/Not-Found-View';
 import Stats from '../../routes/Stats/Stats-View';
 import Create from '../../routes/Account/Create-Account-View';
+import PrivateLanding from '../PrivateLanding/PrivateLanding';
 
 function App() {
+
   return (
     <div className="App">
       <Switch>
@@ -19,6 +21,7 @@ function App() {
         <PublicOnlyRoute 
         path='/create-account' 
         component={Create} />
+        <PrivateRoute path={'/landing'} component={PrivateLanding} />
         <PrivateRoute path={'/game'} component={Game} />
         <PrivateRoute path='/stats' component={Stats} />
         <Route 

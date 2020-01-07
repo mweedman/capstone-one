@@ -49,20 +49,18 @@ class Table extends React.Component {
       </div>}
     return(
       <div className="table container">   
-        <div className="non-player north-hand top">
+        <div className="top">
           <div>
             <button onClick={this.clickHandler}>Deal</button>
           </div>
-        North
         </div>
 
         <div className="mid">
-          <div className="non-player west-hand">West</div>
+          <div className="player-hand west-hand">{layout}</div>
           <div className="play-field">Play</div>
           <div className="non-player east-hand ">East</div>
         </div>
         
-        <div className="player-hand south-hand bot">{layout}</div>
     </div>
     
     )

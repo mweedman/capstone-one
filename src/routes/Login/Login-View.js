@@ -10,8 +10,8 @@ export default class Login extends React.Component {
   }
 
   handleLoginSuccess = () => {
-    const { location, history } = this.props;
-    const destination = (location.state || {}).from || '/';
+    const { history } = this.props;
+    const destination = '/landing';
     history.push(destination);
     }
 

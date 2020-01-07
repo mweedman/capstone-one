@@ -45,6 +45,7 @@ html{
 
 .mid {
   display: flex;
+  width: 98vw;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -58,8 +59,8 @@ html{
 .non-player {
   border: 3px solid white;
   border-radius: 5px;
-  height: 25vh;
-  width: 15vw;
+  height: 50vh;
+  width: 25vw;
 }
 
 .north-hand {
@@ -72,15 +73,15 @@ html{
 .player-hand {
   border: 3px solid white;
   border-radius: 5px;
-  height: 25vh;
-  width: 50vw;
+  height: 50vh;
+  width: 25vw;
 }
 
 .play-field {
   border: 3px solid white;
   border-radius: 5px;
   width: 50vw;
-  height: 30vh;
+  height: 50vh;
 }
 
 

@@ -44,6 +44,7 @@ class CreateAccount extends React.Component{
             <input 
             name="user_password"
             id="password" placeholder="password" 
+            type="password"
             />
             <input 
             name="email_address"

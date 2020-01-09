@@ -1,14 +1,20 @@
 import React from 'react';
-import Card from './Card';
+import Deck from '../Deck/Deck';
 import gameServices from '../../services/game-services';
+import PlayingField from './PlayingField'
 import './Table-view.css';
 
 class Table extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      hand: [],
-      dealt: false
+      dealt: false,
+      handLength1: null,
+      handLength2: null,
+      chestLength1: null,
+      chestLength2: null,
+      pot: [],
+      warPot: [],
     };
   }
 
@@ -18,21 +24,34 @@ class Table extends React.Component {
       .then(returnedHand => this.setHand(returnedHand));
   };
 
-  setHand = (hand) => {
-    console.log(hand);
+  setHand = (cards) => {
     this.setState({
-      hand: hand,
+      handLength1: cards.handLength1,
+      handLength2: cards.handLength2,
       dealt: true
-    }, console.log(hand))
+    }, console.log(this.state))
   };
 
-  playCard = (e, obj) => {
-    e.preventDefault();
-    console.log(obj);
-    gameServices.sendCard(obj, this.state.hand)
-    .then(obj => console.log(obj));
+  setPlayState = (cards) => {
+    this.setState({
+      pot: [...cards.pot],
+      chest1: cards.chest1,
+      warPot: [...cards.warpot],
+      handLength1: cards.handLength1,
+      handLength2: cards.handLength2,
+      chestLength1: cards.chestLength1,
+      chestLength2: cards.chestLength2
+    }, console.log(this.state));
+  };
 
-  }
+  playCard = (e) => {
+    e.preventDefault();
+    gameServices.sendCard()
+    .then(obj => {
+      this.setPlayState(obj);
+    });
+  };
+
 
   //TIMERS DONE ON FRONT END//
 
@@ -42,11 +61,14 @@ class Table extends React.Component {
       layout = <div>Placeholder</div>
     } else{
       layout = <div className ="cards">
-        {this.state.hand.map((card, index) => {
-         return <Card key={index}
-          suit={card[0]} value={card[1]} playCard={this.playCard}/>
-        })}
+          <Deck />
       </div>}
+    let kitty;
+    if(this.state.pot.lenght === 0){
+      kitty = <div>Placeholder</div>
+    } else{
+      kitty = <PlayingField cards={this.state.pot} />
+    }
     return(
       <div className="table container">   
         <div className="top">
@@ -56,9 +78,13 @@ class Table extends React.Component {
         </div>
 
         <div className="mid">
-          <div className="player-hand west-hand">{layout}</div>
-          <div className="play-field">Play</div>
-          <div className="non-player east-hand ">East</div>
+          <div className="player-hand west-hand" onClick={this.playCard}>
+            {layout}
+          </div>
+          <div className="play-field">
+            {kitty}
+          </div>
+          <div className="player-hand east-hand">{layout}</div>
         </div>
         
     </div>

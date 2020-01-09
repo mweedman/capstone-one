@@ -15,21 +15,17 @@ const receiveHand = function(){
     .then(cards => cards.cards);
 };
 
-const sendCard = (obj, hand) => {
-  
-  return fetch(`${config.API_ADDRESS}/game/play`,
+const sendCard = () => {
+  return fetch(`${config.API_ADDRESS}/game`,
   {
     method: 'POST',
     headers: {
       'Authorization': `bearer ${token}`,
       'content-type': 'application/json'
-    },
-    body: JSON.stringify(obj)
+    }
   })
   .then(res => res.json())
-  //splice from hand array
-  //move card to play field
-  .then(card => card);
+  .then(cards => cards.cards);
 };
 
 

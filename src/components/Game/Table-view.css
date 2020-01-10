@@ -1,0 +1,205 @@
+.play-field{
+  display: flex;
+  align-content: stretch;
+}
+.fieldOfPlay{
+  display: flex;
+  flex-direction: row;
+}
+.playerCard{
+  display: flex;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.pcCard{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card{
+  width: 66%;
+  height: 75%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.deck{
+  display: flex;
+  width: 66%;
+  height: 75%;
+  background-image: url(../../card_images/Card_back_02.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+/* Clubs */
+
+#suit1value0{
+  background-image: url(../../card_images/2C.svg);
+}
+#suit1value1{
+  background-image: url(../../card_images/3C.svg);
+}
+#suit1value2{
+  background-image: url(../../card_images/4C.svg);
+}
+#suit1value3{
+  background-image: url(../../card_images/5C.svg);
+}
+#suit1value4{
+  background-image: url(../../card_images/6C.svg);
+}
+#suit1value5{
+  background-image: url(../../card_images/7C.svg);
+}
+#suit1value6{
+  background-image: url(../../card_images/8C.svg);
+}
+#suit1value7{
+  background-image: url(../../card_images/9C.svg);
+}
+#suit1value8{
+  background-image: url(../../card_images/10C.svg);
+}
+#suit1value9{
+  background-image: url(../../card_images/JC.svg);
+}
+#suit1value10{
+  background-image: url(../../card_images/QC.svg);
+}
+#suit1value11{
+  background-image: url(../../card_images/KC.svg);
+}
+#suit1value12{
+  background-image: url(../../card_images/AC.svg);
+}
+
+/* Spades */
+
+#suit2value0{
+  background-image: url(../../card_images/2S.svg);
+}
+#suit2value1{
+  background-image: url(../../card_images/3S.svg);
+}
+#suit2value2{
+  background-image: url(../../card_images/4S.svg);
+}
+#suit2value3{
+  background-image: url(../../card_images/5S.svg);
+}
+#suit2value4{
+  background-image: url(../../card_images/6S.svg);
+}
+#suit2value5{
+  background-image: url(../../card_images/7S.svg);
+}
+#suit2value6{
+  background-image: url(../../card_images/8S.svg);
+}
+#suit2value7{
+  background-image: url(../../card_images/9S.svg);
+}
+#suit2value8{
+  background-image: url(../../card_images/10S.svg);
+}
+#suit2value9{
+  background-image: url(../../card_images/JS.svg);
+}
+#suit2value10{
+  background-image: url(../../card_images/QS.svg);
+}
+#suit2value11{
+  background-image: url(../../card_images/KS.svg);
+}
+#suit2value12{
+  background-image: url(../../card_images/AS.svg);
+}
+
+/* DIAMONDS */
+
+#suit3value0{
+  background-image: url(../../card_images/2D.svg);
+}
+#suit3value1{
+  background-image: url(../../card_images/3D.svg);
+}
+#suit3value2{
+  background-image: url(../../card_images/4D.svg);
+}
+#suit3value3{
+  background-image: url(../../card_images/5D.svg);
+}
+#suit3value4{
+  background-image: url(../../card_images/6D.svg);
+}
+#suit3value5{
+  background-image: url(../../card_images/7D.svg);
+}
+#suit3value6{
+  background-image: url(../../card_images/8D.svg);
+}
+#suit3value7{
+  background-image: url(../../card_images/9D.svg);
+}
+#suit3value8{
+  background-image: url(../../card_images/10D.svg);
+}
+#suit3value9{
+  background-image: url(../../card_images/JD.svg);
+}
+#suit3value10{
+  background-image: url(../../card_images/QD.svg);
+}
+#suit3value11{
+  background-image: url(../../card_images/KD.svg);
+}
+#suit3value12{
+  background-image: url(../../card_images/AD.svg);
+}
+
+/* HEARTS */
+
+#suit4value0{
+  background-image: url(../../card_images/2H.svg);
+}
+#suit4value1{
+  background-image: url(../../card_images/3H.svg);
+}
+#suit4value2{
+  background-image: url(../../card_images/4H.svg);
+}
+#suit4value3{
+  background-image: url(../../card_images/5H.svg);
+}
+#suit4value4{
+  background-image: url(../../card_images/6H.svg);
+}
+#suit4value5{
+  background-image: url(../../card_images/7H.svg);
+}
+#suit4value6{
+  background-image: url(../../card_images/8H.svg);
+}
+#suit4value7{
+  background-image: url(../../card_images/9H.svg);
+}
+#suit4value8{
+  background-image: url(../../card_images/10H.svg);
+}
+#suit4value9{
+  background-image: url(../../card_images/JH.svg);
+}
+#suit4value10{
+  background-image: url(../../card_images/QH.svg);
+}
+#suit4value11{
+  background-image: url(../../card_images/KH.svg);
+}
+#suit4value12{
+  background-image: url(../../card_images/AH.svg);
+}

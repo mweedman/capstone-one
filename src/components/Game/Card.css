@@ -1,19 +1,4 @@
 .card {
-  border: 1px solid black;
-  border-radius: 5px;
   height: 100%;
-  background-color: white;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.card-wrapper{
-  overflow: hidden;
-}
-
-.card-wrapper:last-child, .card-wrapper:hover{
-  overflow: visible;
-}

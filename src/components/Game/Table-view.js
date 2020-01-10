@@ -1,5 +1,4 @@
 import React from 'react';
-import Deck from '../Deck/Deck';
 import gameServices from '../../services/game-services';
 import PlayingField from './PlayingField'
 import './Table-view.css';
@@ -60,11 +59,10 @@ class Table extends React.Component {
     if(this.state.dealt === false){
       layout = <div>Placeholder</div>
     } else{
-      layout = <div className ="cards">
-          <Deck />
+      layout = <div className ="deck">
       </div>}
     let kitty;
-    if(this.state.pot.lenght === 0){
+    if(this.state.pot.length === 0){
       kitty = <div>Placeholder</div>
     } else{
       kitty = <PlayingField cards={this.state.pot} />

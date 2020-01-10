@@ -69,16 +69,25 @@ html{
   height: 50vh;
   width: 25vw;
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: space-evenly;
 }
 
 .play-field {
   border: 3px solid white;
   border-radius: 5px;
-  width: 50vw;
-  height: 50vh;
+  min-width: 50vw;
+  min-height: 50vh;
+  display: flex;
+  align-Items: stretch; 
 }
+
+.fieldOfPlay{
+  min-height: 60px;
+  width: 100%;
+}
+
+
 
 
 

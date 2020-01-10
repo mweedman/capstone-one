@@ -52,6 +52,15 @@ class Table extends React.Component {
     };
   };
 
+  simulateGame = (e) => {
+    e.preventDefault();
+    while (this.state.message === null) {
+      gameServices.sendCard()
+        .then(obj => this.setPlayState(obj));
+        console.log(this.state.message);
+    };
+  }
+
   playCard = (e) => {
     e.preventDefault();
     gameServices.sendCard()
@@ -86,6 +95,7 @@ class Table extends React.Component {
         <div className="top">
           <div>
             <button onClick={this.clickHandler}>Deal</button>
+            <button onClick={this.simulateGame}>IMPATIENT</button>
           </div>
         </div>
 

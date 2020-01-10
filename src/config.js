@@ -1,4 +1,4 @@
 export default {
-  API_ADDRESS: 'http://localhost:8000/api',
-  TOKEN_KEY: 'my-little-secret'
+  API_ADDRESS: process.env.API_ADDRESS || 'https://infinite-coast-46458.herokuapp.com/api',
+  TOKEN_KEY: process.env.TOKEN_KEY
 }

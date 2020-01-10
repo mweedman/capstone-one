@@ -1,5 +1,5 @@
 import React from 'react';
-import Table from '../../components/Game/Table-view';
+import Table from '../../components/Table/Table';
 
 class Game extends React.Component {
   static defaultProps = {

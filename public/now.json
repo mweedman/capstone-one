@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "alias":"michael-war-app",
+  "name": "War!",
+  "routes": [
+      { "handle": "filesystem" },
+      { "src": "/.*", "dest": "/index.html" }
+  ]
+}

@@ -3,13 +3,13 @@ https://michael-war-app.now.sh/
 
 It's the childhood game you know and love(or didn't love)!
 
-![Image of Landing Screen](/src/card_images/war-landing-screen.png?raw=true)
+![Image of Landing Screen](src/card_images/war-landing-page.PNG)
 
 The game is simple: flip a card against an opponent and whoever has played the higher card wins both of them.
 
 The game is completed by completely running your opponent out of cards, so those aces are a precious commodity!
 
-![Image of Table View](/src/card_images/war-table-view.png?raw=true "War Table View")
+![Image of Table View](src/card_images/war-table-view.PNG "War Table View")
 
 The tech stack for this project includes the following technologies:
   > Front-End: Html, CSS, Javascript, ReactJS

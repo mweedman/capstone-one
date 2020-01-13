@@ -13,7 +13,7 @@ The game is completed by completely running your opponent out of cards, so those
 
 The tech stack for this project includes the following technologies:
   > Front-End: Html, CSS, Javascript, ReactJS
-  
+
   > Back-End: NodeJS, Express, Knex, PostreSQL
 
 
@@ -31,6 +31,10 @@ This component handles the form information to be sent to the API in order to au
 
 This component simply takes user input in a form and posts it to the api.
 
+## Testing credentials
+
+> username: Test3
+> password: Testpassword3!
 
 ## Coming Soon!
 > Statistics Features

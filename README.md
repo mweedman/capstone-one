@@ -1,12 +1,22 @@
 # WAR
+https://michael-war-app.now.sh/
 
 It's the childhood game you know and love(or didn't love)!
+
+![Image of Landing Screen](/src/card_images/war-landing-screen.png?raw=true)
 
 The game is simple: flip a card against an opponent and whoever has played the higher card wins both of them.
 
 The game is completed by completely running your opponent out of cards, so those aces are a precious commodity!
 
-This front end file contains all components,routes, and services pertaining to the client side application.  It contains the following main components:
+![Image of Table View](/src/card_images/war-table-view.png?raw=true "War Table View")
+
+The tech stack for this project includes the following technologies:
+  > Front-End: Html, CSS, Javascript, ReactJS
+  > Back-End: NodeJS, Express, Knex, PostreSQL
+
+
+This front end file contains all components, routes, and services pertaining to the client side War application.  It contains the following main components:
 
 > Table (Game)
 
@@ -18,14 +28,9 @@ This component handles the form information to be sent to the API in order to au
 
 > Create-Account
 
-This 
-
-
-> Stats
+This component simply takes user input in a form and posts it to the api.
 
 
 ## Coming Soon!
-> Expanded Statistics Features
+> Statistics Features
 > Additional Game Modes (in a while)
-
-## Connect with me

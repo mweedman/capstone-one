@@ -1,15 +1,16 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import './App.css';
 import Game from '../../routes/Game/Game-View';
 import PublicOnlyRoute from '../Utils/PublicOnlyRoute';
 import PrivateRoute from '../Utils/PrivateRoute';
 import Landing from '../../routes/Landing/Landing-View'
 import Login from '../../routes/Login/Login-View';
+import Learn from '../../routes/Learn/Learn-view';
 import NotFoundPage from '../../routes/NotFound/Not-Found-View';
 import Stats from '../../routes/Stats/Stats-View';
 import Create from '../../routes/Account/Create-Account-View';
-import PrivateLanding from '../PrivateLanding/PrivateLanding';
+import PrivateLanding from '../../routes/PrivateLanding/PrivateLanding-view';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <PublicOnlyRoute 
         path='/create-account' 
         component={Create} />
+        <Route path={'/learn'} component={Learn} />
         <PrivateRoute path={'/landing'} component={PrivateLanding} />
         <PrivateRoute path={'/game'} component={Game} />
         <PrivateRoute path='/stats' component={Stats} />
@@ -32,4 +34,4 @@ function App() {
   );
 }
 
-export default App;
+export default withRouter(App);

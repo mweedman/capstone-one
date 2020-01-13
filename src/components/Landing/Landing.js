@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Landing.css';
 
 export default class Landing extends React.Component{
 
   render(){
     return(
       <div>
+        <h1>WAR!</h1>
+      <div className="landingMenu">
         <Link to='/login'>
           <button>Login</button>
         </Link>
@@ -15,7 +18,10 @@ export default class Landing extends React.Component{
         <Link to='/game'>
           <button>Play Game</button>
         </Link>
-        <button>Learn the Game!</button>
+        <Link to='/learn'>
+          <button>Learn the Game!</button>
+        </Link>
+      </div>
       </div>
     )
   }

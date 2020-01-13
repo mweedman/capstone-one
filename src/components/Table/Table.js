@@ -3,6 +3,7 @@ import gameServices from '../../services/game-services';
 import PlayingField from '../PlayingField/PlayingField';
 import EndMessage from '../EndMessage/EndMessage';
 import './Table.css';
+import { Link } from 'react-router-dom';
 
 class Table extends React.Component {
   constructor(props){
@@ -57,7 +58,6 @@ class Table extends React.Component {
     while (this.state.message === null) {
       gameServices.sendCard()
         .then(obj => this.setPlayState(obj));
-        console.log(this.state.message);
     };
   }
 
@@ -77,14 +77,13 @@ class Table extends React.Component {
     if(this.state.dealt === false){
       layout = 
         <div>
-          Placeholder
         </div>
       } else{
       layout = <div className ="deck">
       </div>}
     let kitty;
     if(this.state.pot.length === 0 && this.state.message === null){
-      kitty = <div>Placeholder</div>
+      kitty = <div></div>
     } else if (this.state.message === null){
       kitty = <PlayingField cards={this.state.pot} />
     } else {
@@ -93,9 +92,11 @@ class Table extends React.Component {
     return(
       <div className="table container">   
         <div className="top">
-          <div>
+          <div className="buttons">
             <button onClick={this.clickHandler}>Deal</button>
-            <button onClick={this.simulateGame}>IMPATIENT</button>
+            <Link to='/landing'>
+              <button>Home</button>
+            </Link>
           </div>
         </div>
 

@@ -13,6 +13,7 @@ The game is completed by completely running your opponent out of cards, so those
 
 The tech stack for this project includes the following technologies:
   > Front-End: Html, CSS, Javascript, ReactJS
+  
   > Back-End: NodeJS, Express, Knex, PostreSQL
 
 
